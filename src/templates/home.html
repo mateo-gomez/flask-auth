@@ -1,0 +1,23 @@
+{% extends './layout.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+{% if current_user.is_authenticated %}
+    <main>
+
+        <h1>Bienvenido, {{ current_user.username }}</h1>
+
+        <div>
+
+            <a href="{{ url_for('logout') }}">Logout</a>
+        </div>
+    </main>
+{% else %}
+    <a href="{{ url_for('login') }}">Login</a>
+{% endif %}
+
+
+
+{% endblock %}

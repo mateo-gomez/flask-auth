@@ -1,0 +1,6 @@
+.login-wrapper {
+    display: grid;
+    place-content: center;
+    width: 1000px;
+    height: 100vh;
+}
